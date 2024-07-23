@@ -11,7 +11,9 @@ addItem(newItem) {
 }
 removeItem(itemToRemove) {
     let str = this.#items.indexOf(itemToRemove);
+    if (str !== -1) {
     this.#items.splice(str, 1);
+    }
 }
 }
 
@@ -26,3 +28,6 @@ console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
 storage.removeItem("Scaner");
 console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
+
+storage.removeItem("ACV");
+console.log(storage.getItems());
