@@ -1,4 +1,3 @@
-
 class Storage {
   #items;
   constructor(items) {
